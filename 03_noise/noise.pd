@@ -1,0 +1,18 @@
+#N canvas -9 -9 1920 976 12;
+#X obj 381 342 noise~;
+#X floatatom 448 374 5 0 0 0 - - -;
+#X obj 383 409 *~;
+#X obj 385 460 dac~;
+#X obj 529 180 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 469 335 / 127;
+#X msg 617 426 \; pd dsp 1;
+#X msg 721 426 \; pd dsp 0;
+#X text 632 463 ON;
+#X text 741 463 OFF;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
